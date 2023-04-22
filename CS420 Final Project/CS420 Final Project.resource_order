@@ -18,6 +18,8 @@
   ],
   "ResourceOrderSettings": [
     {"name":"sprRedShip","order":1,"path":"sprites/sprRedShip/sprRedShip.yy",},
+    {"name":"sprBullet","order":2,"path":"sprites/sprBullet/sprBullet.yy",},
+    {"name":"objBullet","order":4,"path":"objects/objBullet/objBullet.yy",},
     {"name":"objRed","order":2,"path":"objects/objRed/objRed.yy",},
     {"name":"Game","order":1,"path":"objects/Game/Game.yy",},
     {"name":"objBlue","order":3,"path":"objects/objBlue/objBlue.yy",},
