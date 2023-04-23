@@ -1,4 +1,4 @@
-// Movement here, step is basically a while loop
+// Movement here
 
 
 

@@ -1,6 +1,5 @@
 // Game Variables
-game_set_speed(60, gamespeed_fps);
-global.game_spd = 2;
+global.game_spd = 4;
 global.population = 10;
 
 
