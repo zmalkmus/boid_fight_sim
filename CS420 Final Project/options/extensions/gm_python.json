@@ -1,9 +1,6 @@
 {
   "resourceType": "GMExtensionConfigSet",
   "configurables": null,
-  "extensionId": {
-    "name": "gm_python",
-    "path": "extensions/gm_python/gm_python.yy"
-  },
+  "extensionId": null,
   "resourceVersion": "1.0"
 }
