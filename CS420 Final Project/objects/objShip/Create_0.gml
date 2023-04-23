@@ -1,3 +1,4 @@
+max_hp = global.ship_hp;
 hp = global.ship_hp;
 
 team = object_index;

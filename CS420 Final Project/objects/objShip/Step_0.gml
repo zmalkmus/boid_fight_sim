@@ -17,7 +17,7 @@ if (target != noone) {
 
 
 // Die
-if (hp < 100)
+if (hp < 0)
 {
 	instance_destroy();
 }
