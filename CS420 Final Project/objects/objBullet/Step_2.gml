@@ -14,9 +14,7 @@ if (xprevious != x || yprevious != y)
 	{
 		if (hit.object_index == enemy_team)
 		{
-			x = hit.x;
-			y = hit.y;
-			hit.hp -= 10;
+			hit.hp -= global.bullet_dmg;
 			instance_destroy();
 		}
 	}
