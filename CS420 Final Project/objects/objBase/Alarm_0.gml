@@ -1,5 +1,6 @@
 var healList = ds_list_create();
-collision_circle_list(x, y, global.base_radius, objBlue, false, true, healList, false);
+
+collision_circle_list(x, y, global.base_radius, team, false, true, healList, false);
 
 while (!ds_list_empty(healList))
 {
