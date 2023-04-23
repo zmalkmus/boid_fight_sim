@@ -19,7 +19,6 @@ x = position.x;
 y = position.y;
 image_angle = velocity.get_direction();
 
-
 edge_wrap();
 
 

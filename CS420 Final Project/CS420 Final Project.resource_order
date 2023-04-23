@@ -27,7 +27,6 @@
     {"name":"objBullet","order":4,"path":"objects/objBullet/objBullet.yy",},
     {"name":"objRed","order":2,"path":"objects/objRed/objRed.yy",},
     {"name":"obj_demo","order":5,"path":"objects/obj_demo/obj_demo.yy",},
-    {"name":"objBlueTotem","order":8,"path":"objects/objBlueTotem/objBlueTotem.yy",},
     {"name":"Game","order":1,"path":"objects/Game/Game.yy",},
     {"name":"scr_demo_variable_transfer","order":2,"path":"scripts/scr_demo_variable_transfer/scr_demo_variable_transfer.yy",},
     {"name":"objRedBase","order":7,"path":"objects/objRedBase/objRedBase.yy",},
