@@ -29,28 +29,52 @@ function range(ship, target, fb){
 function scan_ships(ship, team, enemy_team){
 	var radar = ds_list_create();
 	
-	var radar_count = collision_circle_list(x,y, global.attack_radius, enemy_team, false, true, radar, true);
-	
+	if (team == "BLUE")
+	{
+		var radar_count = collision_circle_list(x,y, global.attack_radius, objRed, false, true, radar, true);
+		if (distance_to_object(objRedBase) <= global.attack_radius) 
+		{
+			ds_list_insert(radar, radar_count/2, objRedBase);
+			radar_count++;
+		}
+	}
+	else if (team == "RED")
+	{
+		var radar_count = collision_circle_list(x,y, global.attack_radius, objBlue, false, true, radar, true);
+		if (distance_to_object(objBlueBase) <= global.attack_radius) 
+		{
+			ds_list_insert(radar, radar_count/2, objBlueBase);
+			radar_count++;
+		}
+	}
 	
 	// If there are ships inside the radius, attack the closest one that isn't being blocked by an ally ship
 	if (radar_count > 0) 
 	{
 		ship.targeted_by = 0;
 		ship.can_target = 0;
+		
 		for (var i = 0; i < radar_count; i++){
 			var target = ds_list_find_value(radar, i);
 			var dir = point_direction(ship.x, ship.y, target.x, target.y);
 			var rangeCheck = range(ship, dir, 0);
-			if(!collision_line(x, y, target.x, target.y, team, false, true) && rangeCheck){
+			
+			var friendlyInWay = friendly_in_way(team, target);
+			
+			if((friendlyInWay == noone) && rangeCheck){
 				ship.can_target++;
-			}else if(!collision_line(x, y, target.x, target.y, team, false, true) && range(ship,dir, 1)){
+			}else if((friendlyInWay == noone) && range(ship,dir, 1)){
 				ship.targeted_by++;
 			}
 		}
+		
 		var nearestEnemy = noone; 
 		for(var i = 0; i < radar_count; i++){
 			var target = ds_list_find_value(radar, i);
 			var dir = point_direction(ship.x, ship.y, target.x, target.y);
+			
+			var friendlyInWay = friendly_in_way(team, target);
+			
 			if (range(ship, dir, 1))	// Don't target ships you can't see
 			{
 				nearestEnemy = target;
@@ -62,7 +86,10 @@ function scan_ships(ship, team, enemy_team){
 		{
 			var target = ds_list_find_value(radar, i);
 			var dir = point_direction(ship.x, ship.y, target.x, target.y);
-			if (!collision_line(x, y, target.x, target.y, team, false, true) && range(ship, dir, 0))	// Don't target ships you can't see
+			
+			var friendlyInWay = friendly_in_way(team, target);
+			
+			if ((friendlyInWay == noone) && range(ship, dir, 0))	// Don't target ships you can't see
 			{
 				finalTarget = target;
 				break;
@@ -72,4 +99,19 @@ function scan_ships(ship, team, enemy_team){
 		return [finalTarget, nearestEnemy];
 	}
 	else return [noone, noone];
+}
+
+function friendly_in_way(team, target) {
+	friendlyInWay = noone;
+	
+	if (team == "BLUE") {
+		var friendlyInWay = collision_line(x, y, target.x, target.y, objBlue, false, true);
+		if (friendlyInWay == noone) friendlyInWay = collision_line(x, y, target.x, target.y, objBlueBase, false, true);
+	}
+	else if (team == "RED") {
+		var friendlyInWay = collision_line(x, y, target.x, target.y, objRed, false, true);
+		if (friendlyInWay == noone) friendlyInWay = collision_line(x, y, target.x, target.y, objRedBase, false, true);
+	}
+	
+	return friendlyInWay;
 }

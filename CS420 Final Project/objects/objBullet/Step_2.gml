@@ -12,7 +12,7 @@ if (xprevious != x || yprevious != y)
 	
 	if (hit != noone && hit != shooter) 
 	{
-		if (hit.object_index == enemy_team)
+		if (hit.team == enemy_team)
 		{
 			hit.hp -= global.bullet_dmg;
 			instance_destroy();

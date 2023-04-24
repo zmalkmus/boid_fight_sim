@@ -2,7 +2,7 @@
 global.game_spd = 2;
 global.population = 10;
 global.base_radius = 500;
-global.base_hp = 5000;
+global.base_hp = 20000;
 
 
 // Ship variables
@@ -15,7 +15,7 @@ global.heal_amount = 10;
 
 
 // Bullet Variables
-global.bullet_dmg = 50;
+global.bullet_dmg = 20;
 global.bullet_spd = 6*global.game_spd;
 
 

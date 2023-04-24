@@ -8,6 +8,7 @@ apply_force(separation_force(object_index, 50), 2);
 
 //update vectors
 target = scan_ships(self, team, enemy_team);
+
 //if (targeted_by > can_target) {
 //	steering_forces.add(evade_force(target[1]));
 //} else if (can_target > targeted_by){
@@ -26,13 +27,6 @@ y = position.y;
 image_angle = velocity.get_direction();
 
 edge_wrap();
-
-
-
-
-// Targeting
-//target = scan_ships(self, team, enemy_team);
-
 
 // Attack
 if (target[0] != noone) {
