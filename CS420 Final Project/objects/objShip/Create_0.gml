@@ -4,6 +4,8 @@ hp = global.ship_hp;
 team = object_index;
 enemy_team = (team == objBlue) ? objRed : objBlue;
 
+//enemy_team = (team == "BLUE") ? "RED" : "BLUE";
+
 position = new vector(x, y);
 velocity = new vector_random(3);
 steering_forces = new vector_zero();
