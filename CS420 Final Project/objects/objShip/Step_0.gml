@@ -7,6 +7,12 @@ apply_force(separation_force(object_index, 50), 2);
 
 
 //update vectors
+target = scan_ships(self, team, enemy_team);
+//if (targeted_by > can_target) {
+//	steering_forces.add(evade_force(target[1]));
+//} else if (can_target > targeted_by){
+//	steering_forces.add(pursue_force(target[0]));
+//}
 steering_forces.limit_magnitude(max_force);
 velocity.add(steering_forces);
 velocity.limit_magnitude(max_speed);
@@ -25,13 +31,13 @@ edge_wrap();
 
 
 // Targeting
-target = scan_ships(self, team, enemy_team);
+//target = scan_ships(self, team, enemy_team);
 
 
 // Attack
-if (target != noone) {
-	targetX = target.x;
-	targetY = target.y;
+if (target[0] != noone) {
+	targetX = target[0].x;
+	targetY = target[0].y;
 	
 	if (alarm[0] == -1) alarm[0] = global.ship_fire_rate
 }

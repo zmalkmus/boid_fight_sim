@@ -40,22 +40,35 @@ function scan_ships(ship, team, enemy_team){
 			var target = ds_list_find_value(radar, i);
 			var dir = point_direction(ship.x, ship.y, target.x, target.y);
 			var rangeCheck = range(ship, dir, 0);
-			if(rangeCheck){
+			if(!collision_line(x, y, target.x, target.y, team, false, true) && rangeCheck){
 				ship.can_target++;
-			}else if(range(ship,dir, 1)){
+			}else if(!collision_line(x, y, target.x, target.y, team, false, true) && range(ship,dir, 1)){
 				ship.targeted_by++;
 			}
 		}
+		var nearestEnemy = noone; 
+		for(var i = 0; i < radar_count; i++){
+			var target = ds_list_find_value(radar, i);
+			var dir = point_direction(ship.x, ship.y, target.x, target.y);
+			if (range(ship, dir, 1))	// Don't target ships you can't see
+			{
+				nearestEnemy = target;
+				break;
+			}
+		}
+		var finalTarget = noone;
 		for (var i = 0; i < radar_count; i++) 
 		{
 			var target = ds_list_find_value(radar, i);
 			var dir = point_direction(ship.x, ship.y, target.x, target.y);
 			if (!collision_line(x, y, target.x, target.y, team, false, true) && range(ship, dir, 0))	// Don't target ships you can't see
 			{
-				return target;
+				finalTarget = target;
+				break;
 			}
 		}
-		return noone;
+		
+		return [finalTarget, nearestEnemy];
 	}
-	else return noone;
+	else return [noone, noone];
 }
