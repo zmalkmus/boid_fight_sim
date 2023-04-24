@@ -15,3 +15,6 @@ wander_angle = random(360);
 wander_distance = 60;
 wander_power = 5;
 wander_change = 20;
+
+targeted_by = 0;
+can_target = 0; 
