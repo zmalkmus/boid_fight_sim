@@ -1,7 +1,7 @@
 // Game Variables
 global.game_spd = 2;
 global.population = 10;
-global.base_radius = 500;
+global.base_radius = 300;
 global.base_hp = 20000;
 
 
