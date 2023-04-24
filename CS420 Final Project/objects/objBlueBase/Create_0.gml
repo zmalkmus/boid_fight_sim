@@ -1,7 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-// Inherit the parent event
-team = "BLUE";
-event_inherited();
-
+hp = global.base_hp;
+max_hp = global.base_hp;
+alarm[0] = global.heal_rate;

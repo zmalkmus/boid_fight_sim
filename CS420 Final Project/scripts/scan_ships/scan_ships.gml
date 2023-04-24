@@ -31,6 +31,7 @@ function scan_ships(ship, team, enemy_team){
 	
 	var radar_count = collision_circle_list(x,y, global.attack_radius, enemy_team, false, true, radar, true);
 	
+	
 	// If there are ships inside the radius, attack the closest one that isn't being blocked by an ally ship
 	if (radar_count > 0) 
 	{
