@@ -1,3 +1,5 @@
+if (keyboard_check_pressed(vk_space)) room_restart();
+
 // Update Red Team Variables
 global.red_ships_cur = instance_number(objRed);
 
