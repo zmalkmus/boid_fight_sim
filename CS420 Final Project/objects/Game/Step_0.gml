@@ -20,3 +20,27 @@ for (var i = 0; i < global.blue_ships_cur; i++)
 	var ship = instance_find(objBlue, i);
 	global.blue_hp += ship.hp;
 }
+
+
+// End Game
+if (objRedBase.hp <= 0 || global.red_hp <= 0)
+{
+	global.blue_wins++;
+	
+	// Print output to file
+	
+	// Change parameters
+	
+	room_restart();
+}
+
+else if (objBlueBase.hp <= 0 || global.blue_hp <= 0)
+{
+	global.red_wins++;
+	
+	// Print output to file
+	
+	// Change parameters
+	
+	room_restart();
+}

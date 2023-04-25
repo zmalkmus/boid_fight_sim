@@ -1,7 +1,7 @@
 // Game Variables
 global.game_spd = 4;
 global.base_radius = 300;
-global.base_hp = 20000;
+global.base_hp = 5000;
 
 // Blue Team
 global.blue_ships_start = 0;
