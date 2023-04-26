@@ -3,14 +3,14 @@
 target = scan_ships(self, team, enemy_team);
 //nearbyPlanet = scan_planets(self);
 //if(nearbyPlanet == noone){
-	if(hp <= 50){
-		align = -100;
-		cohesion = -100;
-		separation = 100;
+	if(hp <= lowHealth){
+		align = lowHealthAlign;
+		cohesion = lowHealthCohesion;
+		separation = lowHealthSeparation;
 	}else{
-		align = 300;
-		cohesion = 100;
-		separation = 50;
+		align = baseAlign;
+		cohesion = baseCohesion;
+		separation = baseSeparation;
 	}
 
 	apply_force(align_force(object_index, align));
@@ -21,7 +21,7 @@ target = scan_ships(self, team, enemy_team);
 	//update vectors
 
 	//if (targeted_by > can_target) {
-	if(target[1] != noone){
+	if(target[1] != noone && target[1] != objRedBase && target[1] != objBlueBase){
 		steering_forces.add(evade_force(target[1]));
 	}
 	//} else if (can_target > targeted_by){
