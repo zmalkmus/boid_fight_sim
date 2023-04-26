@@ -26,6 +26,15 @@ function range(ship, target, fb){
 	return false;
 }
 
+function scan_planets(ship){
+	var radar_ping = collision_circle(x,y,global.attack_radius/3, objRedBase, false, true);
+	if(radar_ping != noone){
+		return radar_ping;
+	}
+	radar_ping = collision_circle(x,y,global.attack_radius/3, objBlueBase, false, true);
+	return radar_ping;	
+}
+
 function scan_ships(ship, team, enemy_team){
 	var radar = ds_list_create();
 	

@@ -25,6 +25,37 @@ function flee_force(_x, _y) {
 	return _vec;
 }
 
+function dodge_planet(_x, _y){
+	var _vec = new vector(_x, _y);
+	_vec.subtract(position);
+	_vec.set_magnitude(max_speed);
+	_vec.negate();
+	var ogDir = _y;
+	if(ogDir < 0){
+		ogDir = 360 + ogDir;
+	}
+	show_debug_message(_y);
+	var dir = ogDir + 90;
+	_vec.set(_vec.x, dir);
+	_vec.limit_magnitude(max_force);
+	return _vec;
+}
+
+function planet_force(ship, _inst){
+	var shipDir = point_direction(xprevious, yprevious, x, y);
+	var toPlan = point_direction(ship.x, ship.y, _inst.x, _inst.y);
+	var slideToTheLeft = shipDir + 45;
+	var slideToTheRight = shipDir - 45;
+	var dir = 0;
+	if(abs(slideToTheLeft - toPlan) > abs(slideToTheRight - toPlan)){
+		dir = slideToTheLeft;
+	}else{
+		dir = slideToTheRight;
+	}
+	var _vec = new vector_lengthdir(1, dir);
+	return _vec;
+}
+
 function pursue_force(_inst) {
 	var _vec = vector_copy(_inst.velocity);
 	_vec.multiply(30);
@@ -61,7 +92,7 @@ function wander_force() {
 	_vec.set_magnitude(wander_distance);
 	_vec.add(new vector_lengthdir(wander_power, image_angle + wander_angle));
 	_vec.limit_magnitude(max_force);
-
+	
 	wander_angle +=  random_range(-wander_change, wander_change);
 
 	return _vec;

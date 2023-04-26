@@ -15,3 +15,9 @@ wander_change = 20;
 
 targeted_by = 0;
 can_target = 0; 
+
+align = 300;
+cohesion = 100;
+separation = 50;
+
+nearbyPlanet = noone;
