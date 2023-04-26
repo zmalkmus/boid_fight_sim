@@ -1,5 +1,5 @@
 // Game Variables
-global.game_spd = 4;
+global.game_spd = 2;
 global.base_radius = 300;
 global.base_hp = 5000;
 
@@ -48,3 +48,5 @@ global.bullet_spd = 6*global.game_spd;
 global.cohesion = 1;
 global.seperation = 1;
 global.alignment = 1;
+
+

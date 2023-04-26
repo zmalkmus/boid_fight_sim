@@ -44,3 +44,6 @@ else if (objBlueBase.hp <= 0 || global.blue_hp <= 0)
 	
 	room_restart();
 }
+
+// Decrement game timer
+game_timer --;

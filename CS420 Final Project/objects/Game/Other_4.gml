@@ -24,3 +24,8 @@ for (var i = 0; i < global.red_ships_start; i++)
 }
 
 global.red_hp = global.red_max_hp;
+
+
+// Start game timer
+game_timer = 60 * 60 * 1; // 1 minutes
+alarm[0] = game_timer; 
