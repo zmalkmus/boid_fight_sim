@@ -2,24 +2,24 @@
 
 // Blue wins
 if (global.blue_hp > global.red_hp) {
-	global.blue_wins ++;
+	blue_win();
 	room_restart();
 }
 
 // Red wins
 else if (global.blue_hp < global.red_hp) {
-	global.red_wins ++;
+	red_win();
 	room_restart();
 }
 
 // Tie
 else {
 	if (objBlueBase.hp > objRedBase.hp) {
-		global.blue_wins ++;
+		blue_win();
 		room_restart();
 	}
 	if (objBlueBase.hp < objRedBase.hp) {
-		global.red_wins ++;
+		red_win();
 		room_restart();
 	}
 	else

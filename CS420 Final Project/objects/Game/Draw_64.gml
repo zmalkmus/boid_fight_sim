@@ -61,9 +61,9 @@ draw_text(10, 100, "Alignment: " + string(global.blue_alignment));
 draw_text(10, 120, "Cohesion: " + string(global.blue_cohesion));
 draw_text(10, 140, "Seperation: " + string(global.blue_seperation));
 draw_text(10, 160, "Low Health: " + string(global.blue_low_health));
-draw_text(10, 180, "Low Health Alignment: " + string(global.red_low_health_align));
-draw_text(10, 200, "Low Health Cohesion: " + string(global.red_low_health_cohesion));
-draw_text(10, 220, "Low Health Seperation: " + string(global.red_low_health_seperation));
+draw_text(10, 180, "Low Health Alignment: " + string(global.blue_low_health_align));
+draw_text(10, 200, "Low Health Cohesion: " + string(global.blue_low_health_cohesion));
+draw_text(10, 220, "Low Health Seperation: " + string(global.blue_low_health_seperation));
 
 
 // Game timer

@@ -23,11 +23,9 @@ for (var i = 0; i < global.blue_ships_cur; i++)
 
 
 // End Game
-if (objRedBase.hp <= 0 || global.red_hp <= 0)
+if (/*objRedBase.hp <= 0 ||*/ global.red_hp <= 0)
 {
-	global.blue_wins++;
-	
-	// Print output to file
+	blue_win();
 	
 	// Change parameters
 	global.red_alignment = irandom_range(-500,500);
@@ -41,11 +39,9 @@ if (objRedBase.hp <= 0 || global.red_hp <= 0)
 	room_restart();
 }
 
-else if (objBlueBase.hp <= 0 || global.blue_hp <= 0)
+else if (/*objBlueBase.hp <= 0 ||*/ global.blue_hp <= 0)
 {
-	global.red_wins++;
-	
-	// Print output to file
+	red_win();
 	
 	// Change parameters
 	global.blue_alignment = irandom_range(-500,500);

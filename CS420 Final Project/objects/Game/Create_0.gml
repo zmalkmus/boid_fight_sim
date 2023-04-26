@@ -43,10 +43,3 @@ global.heal_amount = 10;
 // Bullet Variables
 global.bullet_dmg = 20;
 global.bullet_spd = 6*global.game_spd;
-
-// Ai Variables
-global.cohesion = 1;
-global.seperation = 1;
-global.alignment = 1;
-
-

@@ -45,6 +45,7 @@
     {"id":{"name":"sprBlueShip","path":"sprites/sprBlueShip/sprBlueShip.yy",},},
     {"id":{"name":"sprBulletRed","path":"sprites/sprBulletRed/sprBulletRed.yy",},},
     {"id":{"name":"movement_stuff","path":"scripts/movement_stuff/movement_stuff.yy",},},
+    {"id":{"name":"write_game_data","path":"scripts/write_game_data/write_game_data.yy",},},
     {"id":{"name":"sprBlueBase","path":"sprites/sprBlueBase/sprBlueBase.yy",},},
     {"id":{"name":"scr_demo_pandas","path":"scripts/scr_demo_pandas/scr_demo_pandas.yy",},},
     {"id":{"name":"objBullet","path":"objects/objBullet/objBullet.yy",},},

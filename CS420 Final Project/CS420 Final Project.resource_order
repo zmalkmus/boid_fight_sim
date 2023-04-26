@@ -23,6 +23,7 @@
     {"name":"edgy","order":3,"path":"scripts/edgy/edgy.yy",},
     {"name":"sprBulletRed","order":6,"path":"sprites/sprBulletRed/sprBulletRed.yy",},
     {"name":"movement_stuff","order":1,"path":"scripts/movement_stuff/movement_stuff.yy",},
+    {"name":"write_game_data","order":4,"path":"scripts/write_game_data/write_game_data.yy",},
     {"name":"sprBlueBase","order":3,"path":"sprites/sprBlueBase/sprBlueBase.yy",},
     {"name":"scr_demo_pandas","order":1,"path":"scripts/scr_demo_pandas/scr_demo_pandas.yy",},
     {"name":"objBullet","order":4,"path":"objects/objBullet/objBullet.yy",},
