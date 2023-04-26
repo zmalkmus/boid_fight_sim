@@ -25,21 +25,13 @@ for (var i = 0; i < global.blue_ships_cur; i++)
 // End Game
 if (objRedBase.hp <= 0 || global.red_hp <= 0)
 {
-	
 	blue_win();
-	
-	// Change parameters
-	
 	room_restart();
 }
 
 else if (objBlueBase.hp <= 0 || global.blue_hp <= 0)
 {
-	
 	red_win();
-	
-	// Change parameters
-	
 	room_restart();
 }
 
