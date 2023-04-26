@@ -1,3 +1,5 @@
+randomise();
+
 // Game Variables
 global.game_spd = 2;
 global.base_radius = 300;
