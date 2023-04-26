@@ -25,9 +25,8 @@ for (var i = 0; i < global.blue_ships_cur; i++)
 // End Game
 if (objRedBase.hp <= 0 || global.red_hp <= 0)
 {
-	global.blue_wins++;
 	
-	// Print output to file
+	blue_win();
 	
 	// Change parameters
 	
@@ -36,9 +35,8 @@ if (objRedBase.hp <= 0 || global.red_hp <= 0)
 
 else if (objBlueBase.hp <= 0 || global.blue_hp <= 0)
 {
-	global.red_wins++;
 	
-	// Print output to file
+	red_win();
 	
 	// Change parameters
 	

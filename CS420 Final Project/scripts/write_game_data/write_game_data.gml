@@ -27,9 +27,23 @@ function write_game_data(blue_win) {
 function blue_win() {
 	global.blue_wins++;
 	write_game_data(1);
+	global.red_alignment = irandom_range(-500,500);
+	global.red_cohesion = irandom_range(-500,500);
+	global.red_seperation = irandom_range(0,500);
+	global.red_low_health = irandom_range(0,100);
+	global.red_low_health_align = irandom_range(-500,500);
+	global.red_low_health_cohesion = irandom_range(-500,500);
+	global.red_low_health_seperation = irandom_range(0,500);
 }
 
 function red_win() {
 	global.red_wins++;
 	write_game_data(0);
+	global.blue_alignment = irandom_range(-500,500);
+	global.blue_cohesion = irandom_range(-500,500);
+	global.blue_seperation = irandom_range(0,500);
+	global.blue_low_health = irandom_range(0,100);
+	global.blue_low_health_align = irandom_range(-500,500);
+	global.blue_low_health_cohesion = irandom_range(-500,500);
+	global.blue_low_health_seperation = irandom_range(0,500);
 }
