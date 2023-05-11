@@ -8,5 +8,6 @@
 5. Select import existing project.
 6. Navigate to cloned repository from the menu.
 7. Select the .yyp file
-8. press f5 to compile and run the project.
-9. The project will appear in your browser.
+8. Navigate to the project.
+9. Press f5 to compile and run the project.
+10. The project will appear in your browser.
